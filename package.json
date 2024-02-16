@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EnzoSz/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EnzoSz/portfolio/issues"
+  },
+  "homepage": "https://github.com/EnzoSz/portfolio#readme",
+  "dependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
