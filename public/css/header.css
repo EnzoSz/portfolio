@@ -1,0 +1,27 @@
+/* barra de navegacion */
+.navbar {
+    padding: 1rem;
+    background-color: black !important;
+    border-bottom: none;
+    font-size: 1.4rem;
+}
+
+.navbar-collapse {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.image-profile {
+    width: 15rem;
+    height: 4rem;
+    /* border-radius: 50%; */
+    object-fit: cover;
+}
+
+/* media queries para responsividad */
+@media screen and (max-width: 767px) {
+    .navbar-brand {
+        display: none;
+    }
+    
+}

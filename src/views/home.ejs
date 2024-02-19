@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enzo Soliz</title>
-</head>
-<body>
-    <h1>Hola mundo</h1>
-</body>
+  <%- include('./partials/head.ejs',{ homeCss: 'home' }) %>
+  <body>
+    <!-- Header -->
+    <%- include('./partials/header.ejs') %>
+
+    <!-- Main -->
+    <main class="container">
+      <!-- Section Hero -->
+      <section class="hero align-items-stretch bg-black">
+        <div
+          class="hero-principal d-flex flex-column justify-content-center align-items-center"
+        >
+          <img
+            class="rounded-circle imgProfile"
+            src="/assets/images/foto-perfil.jpg"
+            alt="Foto de Enzo Soliz"
+          />
+          <h1 class="text-light">Hola, soy Enzo Soliz</h1>
+          <h2 class="text-light">Desarrollador de software</h2>
+        </div>
+      </section>
+
+      <!-- Sobre mí -->
+      <section class="sobre-mi container">
+        <div class="contenedor">
+          <h2 class="seccion-titulo">Sobre mí</h2>
+          <p class="seccion-descripcion">
+            Un profesional enfocado en la creación de soluciones innovadoras
+            para aplicaciones web que ofrezcan experiencias únicas y eficientes.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
