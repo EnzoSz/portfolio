@@ -1,59 +1,53 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
-import LinkedIn from "../components/icons/LinkedIn.astro";
-import GitHub from "../components/icons/GitHub.astro";
-import Mail from "../components/icons/Mail.astro";
-import SocialPill from "../components/SocialPill.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Experience from "../components/Experience.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import Code from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+import Hero from "../components/Hero.astro";
+import ProfileCheck from "../components/icons/ProfileCheck.astro";
+import AboutMe from "../components/AboutMe.astro";
 ---
 
 <Layout
   title="Portfolio de Enzo Soliz - Desarrollador y programador de software"
   description="Contrata a Enzo Soliz para trabajar en tu proyecto de software. Enviame un correo para trabajar conmigo."
 >
-  <main>
-    <section class="w-full lg:w-[740px] mx-auto py-44">
-      <img
-        class="rounded-full size-40 mb-10"
-        src="../../public/img/avatar.jpeg"
-        alt=""
-      />
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
-        Hey, soy Enzo. <a
-          href="https://www.linkedin.com/in/enzo-soliz/"
-          target="_blank"
-          rel="noopener"
-          class="flex justify-center items-center"
-          ><Badge>Disponible para trabajar</Badge></a
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+        <slot />
+      </Hero>
+    </SectionContainer>
+    <div class="space-y-24">
+      <SectionContainer id="experiencia">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
         >
-      </h1>
-      <h2 class="text-2xl text-wrap">
-        <span class="text-yellow-200/90"
-          >Desarrollador de software con enfoque en el backend,</span
+          <Briefcase class="size-8" />
+          Experiencia Laboral
+        </h2>
+        <Experience />
+      </SectionContainer>
+      <SectionContainer id="proyectos">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
         >
-        <span class="opacity-80">y estudiante de Ingeniería en Sistemas.</span>
-        <span class="text-red-200/90"
-          >Con habilidades en el diseño y desarrollo de aplicaciones únicas,</span
+          <Code class="size-8" />
+          Proyectos
+        </h2>
+        <Projects />
+      </SectionContainer>
+      <SectionContainer id="sobre-mi">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
         >
-        <span class="opacity-80"
-          >mi enfoque está en aprender de manera activa y contribuir al
-          crecimiento de proyectos desafiantes.</span
-        >
-      </h2>
-      <nav class="flex gap-x-2 mt-8">
-        <SocialPill href="https://www.linkedin.com/in/enzo-soliz/">
-          <LinkedIn class="size-6" />
-          LinkedIn
-        </SocialPill>
-        <SocialPill href="https://github.com/EnzoSz">
-          <GitHub class="size-6" />
-          GitHub
-        </SocialPill>
-        <SocialPill href="mailto:enzosoliz95@gmail.com">
-          <Mail class="size-6" />
-          enzosoliz95@gmail.com
-        </SocialPill>
-      </nav>
-    </section>
+          <ProfileCheck class="size-8" />
+          Sobre mí
+        </h2>
+        <AboutMe />
+      </SectionContainer>
+    </div>
   </main>
 </Layout>

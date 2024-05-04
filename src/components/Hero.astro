@@ -1,0 +1,100 @@
+---
+const personalImageAlt = "Avatar de Enzo Soliz";
+import Badge from "./Badge.astro";
+import LinkedIn from "./icons/LinkedIn.astro";
+import Mail from "./icons/Mail.astro";
+import GitHub from "./icons/GitHub.astro";
+import SocialPill from "./SocialPill.astro";
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4 flex-row">
+    <img
+      class="rounded-full shadow-lg size-32 mb-10"
+      src="../../public/img/avatar.jpg"
+      alt={personalImageAlt}
+    />
+    <a
+      href="https://www.linkedin.com/in/enzo-soliz/"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Disponible para trabajar</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+  >
+    Hey, soy Enzo Soliz
+  </h1>
+  <p
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+  >
+  <span class="text-yellow-200/90"
+  >Desarrollador de software con enfoque en el backend,</span
+>
+    <span class="opacity-80">y estudiante de Ingeniería en Sistemas.</span>
+    Con habilidades en el diseño y desarrollo de aplicaciones únicas,
+    <span class="opacity-80"
+      >mi enfoque está en aprender de manera activa y contribuir al crecimiento
+      de proyectos desafiantes.</span
+    >
+  </p>
+  <nav class="flex gap-4 mt-8 flex-wrap">
+    <SocialPill href="https://www.linkedin.com/in/enzo-soliz/">
+      <LinkedIn class="size-4 md:size-6" />
+      LinkedIn
+    </SocialPill>
+    <SocialPill href="https://github.com/EnzoSz">
+      <GitHub class="size-4 md:size-6" />
+      GitHub
+    </SocialPill>
+    <SocialPill href="mailto:enzosoliz95@gmail.com">
+      <Mail class="size-4 md:size-6" />
+      Contáctame
+    </SocialPill>
+  </nav>
+</div>
+
+<!-- 
+    <img
+        class="rounded-full size-40 mb-10"
+        src="../../public/img/avatar.jpg"
+        alt=""
+      />
+      <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+        Hey, soy Enzo. <a
+          href="https://www.linkedin.com/in/enzo-soliz/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+          ><Badge>Disponible para trabajar</Badge></a
+        >
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-wrap max-w[700px]">
+        <span class="text-yellow-200/90"
+          >Desarrollador de software con enfoque en el backend,</span
+        >
+        <span class="opacity-80">y estudiante de Ingeniería en Sistemas.</span>
+        Con habilidades en el diseño y desarrollo de aplicaciones únicas,
+        <span class="opacity-80"
+          >mi enfoque está en aprender de manera activa y contribuir al
+          crecimiento de proyectos desafiantes.</span
+        >
+      </h2>
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill href="https://www.linkedin.com/in/enzo-soliz/">
+          <LinkedIn class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/EnzoSz">
+          <GitHub class="size-4 md:size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="mailto:enzosoliz95@gmail.com">
+          <Mail class="size-4 md:size-6" />
+          Contáctame
+        </SocialPill>
+      </nav>
+ -->
